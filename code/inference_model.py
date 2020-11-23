@@ -7,12 +7,11 @@ from model import BertForLS_Score
 
 
 class Analysis:
-    def __init__(self, metric_type, dataset_name, pretrained_model_dir,
+    def __init__(self, dataset_name, pretrained_model_dir,
                  load_model_name=None, is_cuda=True):
         self.dataset_name = dataset_name
         self.load_model_name = load_model_name
         self.pretrained_model_dir = pretrained_model_dir
-        self.metric_type = metric_type
 
         self.config = BertConfig.from_pretrained(pretrained_model_dir)
         self.vocab_size = self.config.vocab_size
