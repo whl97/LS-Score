@@ -1,4 +1,4 @@
-from inference_models import *
+from inference_model import *
 import config as MY_CONFIG
 import torch
 from utils import *
